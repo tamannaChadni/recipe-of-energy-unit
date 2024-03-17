@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 
 
-const Recipe = ({handleToCook}) => {
+const Recipe = ({handleToCook, wantedRecipes}) => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -41,8 +41,10 @@ const Recipe = ({handleToCook}) => {
         {/* right side start */}
 
         <div className="col-span-4">
+
+            {/* <Calculate></Calculate> */}
             <div>
-            {recipes.map((recipe) => (
+            {wantedRecipes.map((recipe) => (
             <Calculate key={recipe.id} recipe={recipe}
             handleToCook={handleToCook}></Calculate>
           ))}
@@ -57,7 +59,8 @@ const Recipe = ({handleToCook}) => {
   );
 };
 Recipe.propTypes = {
-    handleToCook:PropTypes.func
+    handleToCook:PropTypes.func,
+    wantedRecipes:PropTypes.func
   };
 
 export default Recipe;

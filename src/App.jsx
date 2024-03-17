@@ -16,6 +16,7 @@ function App() {
     <>
       <Header></Header>
       <Recipe
+      wantedRecipes={wantedRecipes}
       handleToCook={handleToCook}></Recipe>
     </>
   );
