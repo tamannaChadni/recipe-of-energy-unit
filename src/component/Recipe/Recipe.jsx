@@ -3,15 +3,21 @@ import Calculate from "../CalculateRecipe/Calculate";
 import Details from "../DetailsRecipes/Details";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
+import CurrentRecipe from "../../CurrentRecipe/CurrentRecipe";
 
 const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
   const [recipes, setRecipes] = useState([]);
+  const [removedRecipes, setRemovedRecipes] = useState([]);
+  const[cookingTime,setCookingTime] = useState(0);
+  const [calories,setCalories] = useState(0);
+
 
   useEffect(() => {
     fetch("recipe.json")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
+  console.log(recipes);
 
   //   console.log(recipes);
 
@@ -57,10 +63,35 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
                     handleToCook={handleToCook}
                     wantedRecipes={wantedRecipes}
                     setWantedRecipes={setWantedRecipes}
+                    removedRecipes={removedRecipes}
+                    setRemovedRecipes={setRemovedRecipes}
+                    cookingTime={cookingTime}
+                    setCookingTime={setCookingTime}
+                    calories={calories}
+                    setCalories={setCalories}
                   ></Calculate>
                 ))}
               </div>
+
+              <div className="mt-3">
+                <h1 className="card-title border-b-2 text-center">
+                  Currently cooking:{removedRecipes.length}
+                </h1>
+                {removedRecipes.map((recipe, index) => (
+                  <CurrentRecipe
+                    index={index}
+                    key={recipe.id}
+                    recipe={recipe}
+                  ></CurrentRecipe>
+                ))}
+              </div>
+              <div className="mt-3">
+              <p>Total Time = {cookingTime} minutes</p>
+              <p>Total Calories ={calories} calories</p>
+              </div>
+              
             </div>
+            
           </div>
         </div>
 
@@ -72,10 +103,14 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
 Recipe.propTypes = {
   handleToCook: PropTypes.func,
   wantedRecipes: PropTypes.array,
+  removedRecipes: PropTypes.array,
   setWantedRecipes: PropTypes.func,
   cookingTime: PropTypes.number,
   index: PropTypes.number,
-  handleToPreparedRecipe:PropTypes.func,
+  calories: PropTypes.number,
+  handleToPreparedRecipe: PropTypes.func,
+  setCalories: PropTypes.func,
+  setRemovedRecipes: PropTypes.func,
 };
 
 export default Recipe;

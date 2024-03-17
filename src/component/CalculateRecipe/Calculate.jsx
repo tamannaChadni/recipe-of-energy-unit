@@ -1,26 +1,41 @@
 import PropTypes from "prop-types";
 
-const Calculate = ({ recipe, index, wantedRecipes, setWantedRecipes }) => {
+const Calculate = ({
+  recipe,
+  index,
+  wantedRecipes,
+  setWantedRecipes,
+  removedRecipes,
+  setRemovedRecipes,
+  cookingTime,
+  setCookingTime,
+  calories,
+  setCalories,
+
+}) => {
   const { name, prepTimeMinutes, caloriesPerServing } = recipe;
-//   const [wantedRecipes, setWantedRecipes] = useState([]);
-  const handleToPreparedRecipe =(recipe) =>{
-    const currentlyCook =wantedRecipes.filter(item =>item.id !== recipe.id);
+
+  const handleToPreparedRecipe = (recipe) => {
+    const currentlyCook = wantedRecipes.filter((item) => item.id !== recipe.id);
     setWantedRecipes(currentlyCook);
+    setRemovedRecipes([...removedRecipes, recipe]);
     console.log(currentlyCook);
-  }
+    setCookingTime(cookingTime + recipe.prepTimeMinutes);
+    setCalories(calories+recipe.caloriesPerServing);
+
+  };
+  console.log("removed recipies", removedRecipes);
 
   return (
     <div>
       <div>
         <table className="table">
-          {/* head */}
           <thead>
             <tr>
               <th></th>
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
-              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>
@@ -33,7 +48,9 @@ const Calculate = ({ recipe, index, wantedRecipes, setWantedRecipes }) => {
           </tbody>
         </table>
         <button
-          onClick={() => handleToPreparedRecipe(recipe)}
+          onClick={() =>
+            handleToPreparedRecipe(recipe, prepTimeMinutes, caloriesPerServing)
+          }
           className=" btn bg-red-300 mt-2"
         >
           prepared
@@ -48,8 +65,14 @@ Calculate.propTypes = {
   handleToCook: PropTypes.func,
   setWantedRecipes: PropTypes.func,
   wantedRecipes: PropTypes.array,
+  removedRecipes: PropTypes.array,
   index: PropTypes.number,
   handleToPreparedRecipe: PropTypes.func,
+  setRemovedRecipes: PropTypes.func,
+  cookingTime: PropTypes.number,
+  setCookingTime: PropTypes.func,
+  setCalories: PropTypes.func,
+  calories: PropTypes.number,
 };
 
 export default Calculate;
