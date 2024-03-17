@@ -16,9 +16,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
-  console.log(recipes);
-
-  //   console.log(recipes);
+  
 
   return (
     <div className="container mt-5">
@@ -32,7 +30,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
       <div className="grid grid-cols-6 lg:grid-cols-12 gap-4 mt-4">
         {/* left side start */}
         <div className=" col-span-6 lg:col-span-8">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             {recipes.map((recipe) => (
               <Details
                 key={recipe.id}
@@ -46,14 +44,13 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
         {/* left side end */}
         {/* right side start */}
 
-        <div className="col-span-4">
-          {/* <Calculate></Calculate> */}
+        <div className="col-span-6  lg:col-span-4">
           <div>
             <div className="card  bg-base-100 shadow-xl rounded-xl">
-              <div className="card-body ">
-                <h2 className="card-title border-b-2 text-center text-xl font-bold">
-                  Want to cook: {wantedRecipes.length} <span></span>
-                </h2>
+              <div className="">
+                <h1 className="card-title border-b-2 text-center text-xl font-bold">
+                  Want to cook : {wantedRecipes.length} <span></span>
+                </h1>
                 {wantedRecipes.map((recipe, index) => (
                   <Calculate
                     index={index}
@@ -74,7 +71,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
 
               <div className="mt-3">
                 <h1 className="card-title border-b-2 text-center text-xl font-bold">
-                  Currently cooking:{removedRecipes.length}
+                  Currently cooking : {removedRecipes.length}
                 </h1>
                 {removedRecipes.map((recipe, index) => (
                   <CurrentRecipe

@@ -1,6 +1,6 @@
 import coverImage from "../../assets/cover.jpg";
 import profileImage from "../../assets/frame.png";
-// import { IoSearchOutline } from "react-icons/io5";
+import { IoSearchOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
@@ -66,20 +66,11 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <div className="form-control hidden lg:block">
-            {/* <button className="p-4 m-4 bg-slate-200 rounded-xl">
-              <div><IoSearchOutline></IoSearchOutline></div>search
-            </button> */}
-
-            <input
-            
-           
-            type="text"
-            placeholder="Search"
-            className="input input-bordered w-24 md:w-auto rounded-xl "
-            
-            
-          />
+          <div className="form-control hidden lg:block  bg-gray-100 p-3 m-3 rounded-2xl ">
+            <div className="flex gap-1  items-center">
+              <IoSearchOutline></IoSearchOutline>
+              <p>Search</p>
+            </div>
           </div>
           <div className="w-10 hidden lg:block">
             <img
@@ -95,9 +86,7 @@ const Header = () => {
       <div
         className="hero min-h-screen rounded-xl"
         style={{
-          backgroundImage:
-            // "url(https://ibb.co/dPxpkqP)",
-            `url(${coverImage})`,
+          backgroundImage: `url(${coverImage})`,
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>

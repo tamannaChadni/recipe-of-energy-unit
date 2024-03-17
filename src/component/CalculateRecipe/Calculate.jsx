@@ -11,7 +11,6 @@ const Calculate = ({
   setCookingTime,
   calories,
   setCalories,
-
 }) => {
   const { name, prepTimeMinutes, caloriesPerServing } = recipe;
 
@@ -19,12 +18,10 @@ const Calculate = ({
     const currentlyCook = wantedRecipes.filter((item) => item.id !== recipe.id);
     setWantedRecipes(currentlyCook);
     setRemovedRecipes([...removedRecipes, recipe]);
-    console.log(currentlyCook);
-    setCookingTime(cookingTime + recipe.prepTimeMinutes);
-    setCalories(calories+recipe.caloriesPerServing);
 
+    setCookingTime(cookingTime + recipe.prepTimeMinutes);
+    setCalories(calories + recipe.caloriesPerServing);
   };
-  console.log("removed recipies", removedRecipes);
 
   return (
     <div>
@@ -39,7 +36,7 @@ const Calculate = ({
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-base-200">
+            <tr className="bg-base-200 rounded-xl">
               <th>{index + 1}</th>
               <td>{name}</td>
               <td>{prepTimeMinutes}</td>
