@@ -19,18 +19,26 @@ function App() {
     } else{
       toast.warning("Already added !");
     }
-    // console.log('added');
+    
     
     setCookingTime(cookingTime+time)
   };
+
+  // const handleToPreparedRecipe =(recipe) =>{
+  //   const currentlyCook =wantedRecipes.filter(item =>item.id !== recipe.id);
+  //   setWantedRecipes(currentlyCook);
+  //   console.log(currentlyCook);
+  // }
 
   return (
     <>
       <Header></Header>
       <Recipe
       wantedRecipes={wantedRecipes}
+      setWantedRecipes={setWantedRecipes}
       cookingTime={cookingTime}
-      handleToCook={handleToCook}></Recipe>
+      handleToCook={handleToCook}
+      ></Recipe>
       <ToastContainer />
     </>
   );

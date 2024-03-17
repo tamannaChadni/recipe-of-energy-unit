@@ -1,7 +1,13 @@
 import PropTypes from "prop-types";
 
-const Calculate = ({ recipe }) => {
-  const { id, name, prepTimeMinutes, caloriesPerServing } = recipe;
+const Calculate = ({ recipe, index, wantedRecipes, setWantedRecipes }) => {
+  const { name, prepTimeMinutes, caloriesPerServing } = recipe;
+//   const [wantedRecipes, setWantedRecipes] = useState([]);
+  const handleToPreparedRecipe =(recipe) =>{
+    const currentlyCook =wantedRecipes.filter(item =>item.id !== recipe.id);
+    setWantedRecipes(currentlyCook);
+    console.log(currentlyCook);
+  }
 
   return (
     <div>
@@ -19,14 +25,19 @@ const Calculate = ({ recipe }) => {
           </thead>
           <tbody>
             <tr className="bg-base-200">
-              <th>{id}</th>
+              <th>{index + 1}</th>
               <td>{name}</td>
               <td>{prepTimeMinutes}</td>
               <td>{caloriesPerServing}</td>
             </tr>
           </tbody>
         </table>
-        <button className=" btn bg-red-300 mt-2">prepared</button>
+        <button
+          onClick={() => handleToPreparedRecipe(recipe)}
+          className=" btn bg-red-300 mt-2"
+        >
+          prepared
+        </button>
       </div>
     </div>
   );
@@ -35,6 +46,10 @@ const Calculate = ({ recipe }) => {
 Calculate.propTypes = {
   recipe: PropTypes.object.isRequired,
   handleToCook: PropTypes.func,
+  setWantedRecipes: PropTypes.func,
+  wantedRecipes: PropTypes.array,
+  index: PropTypes.number,
+  handleToPreparedRecipe: PropTypes.func,
 };
 
 export default Calculate;
