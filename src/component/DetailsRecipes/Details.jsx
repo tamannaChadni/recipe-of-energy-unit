@@ -1,9 +1,8 @@
 import { CiClock2 } from "react-icons/ci";
 import { FaFireAlt } from "react-icons/fa";
 import PropTypes from "prop-types";
-const Details = ({ recipe,handleToCook }) => {
+const Details = ({ recipe, handleToCook }) => {
   const {
-    
     name,
     ingredients,
     description,
@@ -47,7 +46,12 @@ const Details = ({ recipe,handleToCook }) => {
         </div>
 
         <div className="card-actions">
-          <button onClick={()=>handleToCook(recipe)} className="btn bg-green-500">Want to Cook</button>
+          <button
+            onClick={() => handleToCook(recipe,prepTimeMinutes)}
+            className="btn bg-green-500 text-white"
+          >
+            Want to Cook
+          </button>
         </div>
       </div>
     </div>
@@ -55,7 +59,7 @@ const Details = ({ recipe,handleToCook }) => {
 };
 Details.propTypes = {
   recipe: PropTypes.object.isRequired,
-  handleToCook:PropTypes.func
+  handleToCook: PropTypes.func,
 };
 
 export default Details;

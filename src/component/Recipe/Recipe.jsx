@@ -4,8 +4,16 @@ import Details from "../DetailsRecipes/Details";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Recipe = ({ handleToCook, wantedRecipes }) => {
+const Recipe = ({ handleToCook, wantedRecipes,cookingTime }) => {
+
+
   const [recipes, setRecipes] = useState([]);
+   
+  
+
+
+
+
 
   useEffect(() => {
     fetch("recipe.json")
@@ -47,7 +55,7 @@ const Recipe = ({ handleToCook, wantedRecipes }) => {
             <div className="card  bg-base-100 shadow-xl rounded-xl">
               <div className="card-body ">
                 <h2 className="card-title border-b-2 text-center">
-                  Want to cook: <span></span>
+                  Want to cook:{cookingTime} <span></span>
                 </h2>
                 {wantedRecipes.map((recipe) => (
                   <Calculate
@@ -68,7 +76,8 @@ const Recipe = ({ handleToCook, wantedRecipes }) => {
 };
 Recipe.propTypes = {
   handleToCook: PropTypes.func,
-  wantedRecipes: PropTypes.func,
+  wantedRecipes: PropTypes.array,
+  cookingTime:PropTypes.number
 };
 
 export default Recipe;
