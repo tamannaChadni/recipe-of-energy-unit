@@ -4,8 +4,7 @@ import Details from "../DetailsRecipes/Details";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-
-const Recipe = ({handleToCook, wantedRecipes}) => {
+const Recipe = ({ handleToCook, wantedRecipes }) => {
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -26,31 +25,40 @@ const Recipe = ({handleToCook, wantedRecipes}) => {
       </p>
       {/* heading */}
       <div className="grid grid-cols-6 lg:grid-cols-12 gap-4 mt-4">
-      
         {/* left side start */}
         <div className=" col-span-6 lg:col-span-8">
-            <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             {recipes.map((recipe) => (
-            <Details key={recipe.id} recipe={recipe}
-            handleToCook={handleToCook}></Details>
-          ))}
-            </div>
+              <Details
+                key={recipe.id}
+                recipe={recipe}
+                handleToCook={handleToCook}
+              ></Details>
+            ))}
+          </div>
         </div>
 
         {/* left side end */}
         {/* right side start */}
 
         <div className="col-span-4">
-
-            {/* <Calculate></Calculate> */}
-            <div>
-            {wantedRecipes.map((recipe) => (
-            <Calculate key={recipe.id} recipe={recipe}
-            handleToCook={handleToCook}></Calculate>
-          ))}
+          {/* <Calculate></Calculate> */}
+          <div>
+            <div className="card  bg-base-100 shadow-xl rounded-xl">
+              <div className="card-body ">
+                <h2 className="card-title border-b-2 text-center">
+                  Want to cook: <span></span>
+                </h2>
+                {wantedRecipes.map((recipe) => (
+                  <Calculate
+                    key={recipe.id}
+                    recipe={recipe}
+                    handleToCook={handleToCook}
+                  ></Calculate>
+                ))}
+              </div>
             </div>
-       
-          
+          </div>
         </div>
 
         {/* right side end */}
@@ -59,8 +67,8 @@ const Recipe = ({handleToCook, wantedRecipes}) => {
   );
 };
 Recipe.propTypes = {
-    handleToCook:PropTypes.func,
-    wantedRecipes:PropTypes.func
-  };
+  handleToCook: PropTypes.func,
+  wantedRecipes: PropTypes.func,
+};
 
 export default Recipe;
