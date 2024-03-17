@@ -1,0 +1,265 @@
+ [
+    {
+    "id": 1,
+    "name": "Classic Margherita Pizza",
+    "ingredients": [
+    "Pizza dough",
+    "Tomato sauce",
+    "Fresh mozzarella cheese",
+    "Fresh basil leaves",
+    "Olive oil",
+    "Salt and pepper to taste"
+    ],
+    "description": "Pizza margherita, as the Italians call it, is a simple pizza hailing from Naples",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Easy",
+    "cuisine": "Italian",
+    "caloriesPerServing": 300,
+    "tags": [
+    "Pizza",
+    "Italian"
+    ],
+    "userId": 45,
+    "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+    "rating": 4.6,
+    "reviewCount": 3,
+    "mealType": [
+    "Dinner"
+    ]
+    },
+    {
+    "id": 2,
+    "name": "Vegetarian Stir-Fry",
+    "ingredients": [
+    "Tofu, cubed",
+    "Broccoli florets",
+    "Carrots, sliced",
+    "Bell peppers, sliced",
+    "Soy sauce",
+    "Ginger, minced",
+    "Garlic, minced",
+    "Sesame oil",
+    "Cooked rice for serving"
+    ],
+    "description":"The technique originated in China and in recent centuries has spread into other parts of Asia and the West.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 20,
+    "servings": 3,
+    "difficulty": "Medium",
+    "cuisine": "Asian",
+    "caloriesPerServing": 250,
+    "tags": [
+    "Vegetarian",
+    "Stir-fry",
+    "Asian"
+    ],
+    "userId": 58,
+    "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+    "rating": 4.7,
+    "reviewCount": 36,
+    "mealType": [
+    "Lunch"
+    ]
+    },
+    {
+    "id": 3,
+    "name": "Chocolate Chip Cookies",
+    "ingredients": [
+    "All-purpose flour",
+    "Butter, softened",
+    "Brown sugar",
+    "White sugar",
+    "Eggs",
+    "Vanilla extract",
+    "Baking soda",
+    "Salt",
+    "Chocolate chips"
+    ],
+    "description": "A chocolate chip cookie is a sweet baked treat that is recognized by its butter flavor and the inclusion of chocolate chips",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 10,
+    "servings": 24,
+    "difficulty": "Easy",
+    "cuisine": "American",
+    "caloriesPerServing": 150,
+    "tags": [
+    "Cookies",
+    "Dessert",
+    "Baking"
+    ],
+    "userId": 39,
+    "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
+    "rating": 4.9,
+    "reviewCount": 23,
+    "mealType": [
+    "Snack",
+    "Dessert"
+    ]
+    },
+    {
+    "id": 4,
+    "name": "Chicken Alfredo Pasta",
+    "ingredients": [
+    "Fettuccine pasta",
+    "Chicken breast, sliced",
+    "Heavy cream",
+    "Parmesan cheese, grated",
+    "Garlic, minced",
+    "Butter",
+    "Salt and pepper to taste",
+    "Fresh parsley for garnish"
+    ],
+    "description": "Alfredo is a creamy, dreamy pan sauce made from butter and Parmigiano-Reggiano cheese",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 20,
+    "servings": 4,
+    "difficulty": "Medium",
+    "cuisine": "Italian",
+    "caloriesPerServing": 500,
+    "tags": [
+    "Pasta",
+    "Chicken"
+    ],
+    "userId": 46,
+    "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+    "rating": 4.9,
+    "reviewCount": 38,
+    "mealType": [
+    "Lunch",
+    "Dinner"
+    ]
+    },
+    {
+    "id": 5,
+    "name": "Mango Salsa Chicken",
+    "ingredients": [
+    "Chicken thighs",
+    "Mango, diced",
+    "Red onion, finely chopped",
+    "Cilantro, chopped",
+    "Lime juice",
+    "Jalapeño, minced",
+    "Salt and pepper to taste",
+    "Cooked rice for serving"
+    ],
+    "description": "Easy, healthy and bursting with flavor with just a few simple ingredients, this Mango Salsa Chicken will be your go-to for busy nights",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 25,
+    "servings": 3,
+    "difficulty": "Easy",
+    "cuisine": "Mexican",
+    "caloriesPerServing": 380,
+    "tags": [
+    "Chicken",
+    "Salsa"
+    ],
+    "userId": 48,
+    "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+    "rating": 4.9,
+    "reviewCount": 25,
+    "mealType": [
+    "Dinner"
+    ]
+    },
+    {
+    "id": 6,
+    "name": "Quinoa Salad with Avocado",
+    "ingredients": [
+    "Quinoa, cooked",
+    "Avocado, diced",
+    "Cherry tomatoes, halved",
+    "Cucumber, diced",
+    "Red bell pepper, diced",
+    "Feta cheese, crumbled",
+    "Lemon vinaigrette dressing",
+    "Salt and pepper to taste"
+    ],
+    "description": "Avocado Quinoa Salad is fresh and flavorful, made with cucumbers, tomato, red onion, cilantro and lime juice",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Easy",
+    "cuisine": "Mediterranean",
+    "caloriesPerServing": 280,
+    "tags": [
+    "Salad",
+    "Quinoa"
+    ],
+    "userId": 5,
+    "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
+    "rating": 4.4,
+    "reviewCount": 21,
+    "mealType": [
+    "Lunch",
+    "Side Dish"
+    ]
+    },
+    {
+    "id": 7,
+    "name": "Tomato Basil Bruschetta",
+    "ingredients": [
+    "Baguette, sliced",
+    "Tomatoes, diced",
+    "Fresh basil, chopped",
+    "Garlic cloves, minced",
+    "Balsamic glaze",
+    "Olive oil",
+    "Salt and pepper to taste"
+    ],
+    "description": "A slice of bread toasted in the oven or grilled, often rubbed with garlic and topped with extra-virgin olive oil, tomatoes and salt",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 10,
+    "servings": 6,
+    "difficulty": "Easy",
+    "cuisine": "Italian",
+    "caloriesPerServing": 120,
+    "tags": [
+    "Bruschetta",
+    "Italian"
+    ],
+    "userId": 50,
+    "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
+    "rating": 4.7,
+    "reviewCount": 9,
+    "mealType": [
+    "Appetizer"
+    ]
+    },
+    {
+    "id": 8,
+    "name": "Beef and Broccoli Stir-Fry",
+    "ingredients": [
+    "Beef sirloin, thinly sliced",
+    "Broccoli florets",
+    "Soy sauce",
+    "Oyster sauce",
+    "Sesame oil",
+    "Garlic, minced",
+    "Ginger, minced",
+    "Cornstarch",
+    "Cooked white rice for serving"
+    ],
+    "description": "It's really a simple combination of the tender marinated flank steak, crisp broccoli, aromatics",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 15,
+    "servings": 4,
+    "difficulty": "Medium",
+    "cuisine": "Asian",
+    "caloriesPerServing": 380,
+    "tags": [
+    "Beef",
+    "Stir-fry",
+    "Asian"
+    ],
+    "userId": 18,
+    "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
+    "rating": 4.7,
+    "reviewCount": 18,
+    "mealType": [
+    "Dinner"
+    ]
+    }
+    
+    ]
