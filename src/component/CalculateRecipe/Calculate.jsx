@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Calculate = ({
   recipe,
@@ -21,6 +23,7 @@ const Calculate = ({
 
     setCookingTime(cookingTime + recipe.prepTimeMinutes);
     setCalories(calories + recipe.caloriesPerServing);
+    toast.info("Dish prepared !");
   };
 
   return (
@@ -53,10 +56,11 @@ const Calculate = ({
           prepared
         </button>
       </div>
+     
     </div>
   );
 };
-
+  <ToastContainer /> 
 Calculate.propTypes = {
   recipe: PropTypes.object.isRequired,
   handleToCook: PropTypes.func,

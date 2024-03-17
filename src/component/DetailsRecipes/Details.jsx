@@ -1,7 +1,7 @@
-import { CiClock2 } from "react-icons/ci";
+import { FaClock } from "react-icons/fa6";
 import { FaFireAlt } from "react-icons/fa";
 import PropTypes from "prop-types";
-const Details = ({ recipe, handleToCook,index }) => {
+const Details = ({ recipe, handleToCook, index }) => {
   const {
     name,
     ingredients,
@@ -32,14 +32,14 @@ const Details = ({ recipe, handleToCook,index }) => {
         <hr />
         <div className="flex  justify-around gap-10 ">
           <div className="flex gap-2 justify-center items-center">
-            <CiClock2 />
-            <p>
+            <FaClock />
+            <p className="font-bold">
               <span>{prepTimeMinutes}</span>minutes
             </p>
           </div>
           <div className="flex justify-between gap-2 items-center">
             <FaFireAlt />
-            <p>
+            <p className="font-bold">
               <span>{caloriesPerServing}</span>calories
             </p>
           </div>
@@ -47,7 +47,7 @@ const Details = ({ recipe, handleToCook,index }) => {
 
         <div className="card-actions">
           <button
-            onClick={() => handleToCook(recipe,index)}
+            onClick={() => handleToCook(recipe, index)}
             className="btn bg-green-500 text-white"
           >
             Want to Cook
@@ -60,7 +60,7 @@ const Details = ({ recipe, handleToCook,index }) => {
 Details.propTypes = {
   recipe: PropTypes.object.isRequired,
   handleToCook: PropTypes.func,
-  index:PropTypes.number
+  index: PropTypes.number,
 };
 
 export default Details;

@@ -13,6 +13,7 @@ function App() {
     if (!isExist) {
       const prepRecipe = [...wantedRecipes, recipe];
       setWantedRecipes(prepRecipe);
+      toast.success("One dish added !");
     } else {
       toast.warning("Already added !");
     }
