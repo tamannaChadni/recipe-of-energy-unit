@@ -36,6 +36,7 @@ const Calculate = ({
               <th>Name</th>
               <th>Time</th>
               <th>Calories</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -44,6 +45,7 @@ const Calculate = ({
               <td>{name}</td>
               <td>{prepTimeMinutes}</td>
               <td>{caloriesPerServing}</td>
+              
             </tr>
           </tbody>
         </table>
@@ -56,11 +58,10 @@ const Calculate = ({
           prepared
         </button>
       </div>
-     
     </div>
   );
 };
-  <ToastContainer /> 
+<ToastContainer />;
 Calculate.propTypes = {
   recipe: PropTypes.object.isRequired,
   handleToCook: PropTypes.func,

@@ -49,7 +49,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
             <div className="card  bg-base-100 shadow-xl rounded-xl">
               <div className="">
                 <h1 className="card-title border-b-2 text-center text-xl font-bold">
-                  Want to cook : {wantedRecipes.length} <span></span>
+                  Want to cook : <span className=" text-green-400">{wantedRecipes.length}</span>  
                 </h1>
                 {wantedRecipes.map((recipe, index) => (
                   <Calculate
@@ -67,11 +67,12 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
                     setCalories={setCalories}
                   ></Calculate>
                 ))}
+                
               </div>
 
               <div className="mt-3">
                 <h1 className="card-title border-b-2 text-center text-xl font-bold">
-                  Currently cooking : {removedRecipes.length}
+                  Currently cooking : <span className=" text-green-400">{removedRecipes.length}</span>
                 </h1>
                 {removedRecipes.map((recipe, index) => (
                   <CurrentRecipe
@@ -83,10 +84,10 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
               </div>
               <div className="mt-3">
                 <p className="font-bold text-xl">
-                  Total Time = {cookingTime} minutes
+                  Total Time = <span className=" text-green-400">{cookingTime}</span> minutes
                 </p>
                 <p className="font-bold text-xl">
-                  Total Calories ={calories} calories
+                  Total Calories = <span className=" text-green-400">{calories}</span> calories
                 </p>
               </div>
             </div>
