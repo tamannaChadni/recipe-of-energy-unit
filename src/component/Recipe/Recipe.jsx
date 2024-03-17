@@ -8,9 +8,8 @@ import CurrentRecipe from "../../CurrentRecipe/CurrentRecipe";
 const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
   const [recipes, setRecipes] = useState([]);
   const [removedRecipes, setRemovedRecipes] = useState([]);
-  const[cookingTime,setCookingTime] = useState(0);
-  const [calories,setCalories] = useState(0);
-
+  const [cookingTime, setCookingTime] = useState(0);
+  const [calories, setCalories] = useState(0);
 
   useEffect(() => {
     fetch("recipe.json")
@@ -52,7 +51,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
           <div>
             <div className="card  bg-base-100 shadow-xl rounded-xl">
               <div className="card-body ">
-                <h2 className="card-title border-b-2 text-center">
+                <h2 className="card-title border-b-2 text-center text-xl font-bold">
                   Want to cook: {wantedRecipes.length} <span></span>
                 </h2>
                 {wantedRecipes.map((recipe, index) => (
@@ -74,7 +73,7 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
               </div>
 
               <div className="mt-3">
-                <h1 className="card-title border-b-2 text-center">
+                <h1 className="card-title border-b-2 text-center text-xl font-bold">
                   Currently cooking:{removedRecipes.length}
                 </h1>
                 {removedRecipes.map((recipe, index) => (
@@ -86,12 +85,14 @@ const Recipe = ({ handleToCook, wantedRecipes, setWantedRecipes }) => {
                 ))}
               </div>
               <div className="mt-3">
-              <p>Total Time = {cookingTime} minutes</p>
-              <p>Total Calories ={calories} calories</p>
+                <p className="font-bold text-xl">
+                  Total Time = {cookingTime} minutes
+                </p>
+                <p className="font-bold text-xl">
+                  Total Calories ={calories} calories
+                </p>
               </div>
-              
             </div>
-            
           </div>
         </div>
 
